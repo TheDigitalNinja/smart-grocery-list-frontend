@@ -4,7 +4,7 @@ declare var componentHandler: any;
 
 @Component({
   selector: 'app',
-  templateUrl: 'app/app.component.html',
+  templateUrl: 'angular/app/app.component.html',
 })
 
 export class AppComponent {
