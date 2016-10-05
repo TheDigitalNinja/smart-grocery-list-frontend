@@ -16,11 +16,15 @@ var AppComponent = (function () {
         this.newItem = new Item();
     }
     AppComponent.prototype.addItem = function () {
+        console.log("adding item");
         if (this.newItem && this.newItem.name != null) {
             this.items.push(this.newItem.name);
-            document.getElementById('addGroceryInput').value = ""; // Reset the form on addition.
+            //document.getElementById('addGroceryInput').value = ""; // Reset the form on addition.
             this.newItem = new Item(); // Reset it to the constructor. TODO: Better way?
         }
+    };
+    AppComponent.prototype.ngAfterViewInit = function () {
+        componentHandler.upgradeDom();
     };
     AppComponent = __decorate([
         core_1.Component({
