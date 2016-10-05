@@ -1,0 +1,36 @@
+<div class="mdl-grid">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--4-col">
+
+        <!-- Tabs -->
+        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+            <div class="mdl-tabs__tab-bar">
+                <a href="#shopping-panel" class="mdl-tabs__tab">Shopping</a>
+                <a href="#groceries-panel" class="mdl-tabs__tab is-active">Groceries</a>
+            </div>
+            <div class="mdl-tabs__panel" id="shopping-panel">
+                <p>Shopping</p>
+            </div>
+            <div class="mdl-tabs__panel is-active" id="groceries-panel">
+
+
+                <!-- List -->
+                <ul class="mdl-list">
+                    <li *ngIf="items.length === 0" class="mdl-list__item">No grocery items.</li>
+
+                    <li *ngFor="let item of items" class="mdl-list__item">
+                        {{ item }}
+                    </li>
+
+                </ul>
+
+                <input [(ngModel)]="item.name" placeholder="Item">
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="mdl-layout-spacer"></div>
+</div>
+
