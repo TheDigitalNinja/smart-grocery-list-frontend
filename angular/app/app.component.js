@@ -16,7 +16,6 @@ var AppComponent = (function () {
         this.newItem = new Item();
     }
     AppComponent.prototype.addItem = function () {
-        console.log("adding item");
         if (this.newItem && this.newItem.name != null) {
             this.items.push(this.newItem.name);
             //document.getElementById('addGroceryInput').value = ""; // Reset the form on addition.
