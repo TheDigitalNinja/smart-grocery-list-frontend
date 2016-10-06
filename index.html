@@ -22,52 +22,52 @@
       System.import('angular').catch(function(err){ console.error(err); });
     </script>
 
-  </head>
-  <!-- 3. Display the application -->
-  <body>
+</head>
+<body>
 
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Smart Grocery List</span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href=""><i class="material-icons">add_circle</i> Add New</a>
-        </nav>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
       <span class="mdl-layout-title">Smart Grocery List</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="https://github.com/TheDigitalNinja/Smart-Grocery-List/issues/new" target="_blank">Report Issue</a>
-        <a class="mdl-navigation__link" href="/item" target="_blank">API</a>
-        <a class="mdl-navigation__link" href="https://github.com/TheDigitalNinja/Smart-Grocery-List" target="_blank">Github</a>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href=""><i class="material-icons">add_circle</i> Add New</a>
       </nav>
     </div>
-
-    <!-- content -->
-    <main class="mdl-layout__content">
-      <div class="page-content">
-        <app>Loading...</app>
-      </div>
-    </main>
-    <!-- end content -->
-
-    <footer class="mdl-mini-footer">
-      <div class="mdl-mini-footer__left-section">
-        <div class="mdl-logo">Smart Grocery List</div>
-        <ul class="mdl-mini-footer__link-list">
-          <li><a href="https://github.com/TheDigitalNinja/Smart-Grocery-List/issues/new" target="_blank">Report Issue</a></li>
-          <li><a href="/item" target="_blank">API</a></li>
-          <li><a href="https://github.com/TheDigitalNinja/Smart-Grocery-List" target="_blank">Github</a></li>
-        </ul>
-      </div>
-    </footer>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Smart Grocery List</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="https://github.com/TheDigitalNinja/Smart-Grocery-List/issues/new" target="_blank">Report Issue</a>
+      <a class="mdl-navigation__link" href="/item" target="_blank">API</a>
+      <a class="mdl-navigation__link" href="https://github.com/TheDigitalNinja/Smart-Grocery-List" target="_blank">Github</a>
+    </nav>
   </div>
 
+  <!-- 3. Display the application -->
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <app>Loading...</app>
+    </div>
+  </main>
+  <!-- end application display -->
 
-  </body>
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">Smart Grocery List</div>
+      <ul class="mdl-mini-footer__link-list">
+        <li><a href="https://github.com/TheDigitalNinja/Smart-Grocery-List/issues/new" target="_blank">Report Issue</a></li>
+        <li><a href="/item" target="_blank">API</a></li>
+        <li><a href="https://github.com/TheDigitalNinja/Smart-Grocery-List" target="_blank">Github</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+
+</body>
 </html>
