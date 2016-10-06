@@ -16,7 +16,7 @@ export class AppComponent {
     }
 
   // Mockup of items
-  items = [];
+  items = ["Mockup Item"];
 
   addItem(){
     if (this.newItem && this.newItem.name != null) {

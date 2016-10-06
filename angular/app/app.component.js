@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
         // Mockup of items
-        this.items = [];
+        this.items = ["Mockup Item"];
         this.newItem = new Item();
     }
     AppComponent.prototype.addItem = function () {
