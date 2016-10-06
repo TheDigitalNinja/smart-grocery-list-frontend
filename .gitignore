@@ -35,6 +35,11 @@ jspm_packages
 .npm
 typings
 
+# Transpiles files from type script
+angular/**/*.js
+angular/**/*.map
+
+
 # Optional eslint cache
 .eslintcache
 
