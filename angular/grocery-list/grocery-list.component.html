@@ -2,18 +2,18 @@
 
     <li *ngIf="!items" class="mdl-list__item">No grocery items.</li>
 
-    <li *ngFor="let item of items" class="mdl-list__item">
-        <input 
+    <li *ngFor="let item of items" class="mdl-list__item" id="{{ item._links.self.href }}">
+        <input
             class="mdl-textfield__input"
             type="text"
             value="{{ item.name }}"
             autocomplete="off">
-        <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
+        <a (click)=deleteItem(item._links.self.href); class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
     </li>
 
 </ul>
 
-<form action="#" (ngSubmit)="addItem(newItemName.value)">
+<form action="#" (ngSubmit)="addItem(newItemName.value); newItemName.value=''">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input 
         #newItemName

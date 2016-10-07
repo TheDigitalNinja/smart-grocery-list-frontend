@@ -26,16 +26,19 @@ export class GroceryListService {
                     .catch(this.handleError);
   }
 
+  deleteItem (itemUrl: string): Observable<Item> {
+    return this.http.delete(itemUrl);
+  }
+
   private extractData(res: Response) {
-    console.log(res.json()._embedded.item);
+    // Extract data from spring data.
     let body = res.json()._embedded.item;
     return body || { };
   }
 
   private extractPostRepData(res: Response) {
-    console.log(res.json());
     let body = res.json();
-    return body.data || { };
+    return body || { };
   }
 
   private handleError (error: any) {
