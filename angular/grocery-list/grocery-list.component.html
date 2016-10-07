@@ -6,21 +6,21 @@
         <input 
             class="mdl-textfield__input"
             type="text"
-            value="{{ item}}"
+            value="{{ item.name }}"
             autocomplete="off">
         <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
     </li>
 
 </ul>
 
-<form action="#" (ngSubmit)="addItem()">
+<form action="#" (ngSubmit)="addItem(newItemName.value)">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <!-- <input 
-        [(ngModel)]="item.name"
+      <input 
+        #newItemName
         name="name"
         class="mdl-textfield__input"
         type="text"
         id="addGroceryInput">
-      <label class="mdl-textfield__label" for="addGroceryInput">Item</label> -->
+      <label class="mdl-textfield__label" for="addGroceryInput">Item</label>
     </div>
 </form>

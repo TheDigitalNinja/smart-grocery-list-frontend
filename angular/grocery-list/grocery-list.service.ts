@@ -22,11 +22,18 @@ export class GroceryListService {
     let options = new RequestOptions({ headers: headers });
 
     return this.http.post(this.itemsUrl, body, options)
-                    .map(this.extractData)
+                    .map(this.extractPostRepData)
                     .catch(this.handleError);
   }
 
   private extractData(res: Response) {
+    console.log(res.json()._embedded.item);
+    let body = res.json()._embedded.item;
+    return body || { };
+  }
+
+  private extractPostRepData(res: Response) {
+    console.log(res.json());
     let body = res.json();
     return body.data || { };
   }
