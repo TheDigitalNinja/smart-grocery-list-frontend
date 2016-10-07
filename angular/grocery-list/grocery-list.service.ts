@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class GroceryListService {
-  private itemsUrl = 'http://smartgrocerylist.us-west-2.elasticbeanstalk.com/item';  // URL to web API
+  private itemsUrl = 'http://localhost:8080/item';  // URL to web API
 
   constructor (private http: Http) {}
 

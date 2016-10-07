@@ -9,7 +9,7 @@ import { GroceryListComponent }   from '../grocery-list/grocery-list.component';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, JsonpModule ],
   declarations: [ AppComponent, GroceryListComponent ],
-  bootstrap:    [ AppComponent, GroceryListComponent ]
+  bootstrap:    [ AppComponent ]
 })
 
 export class AppModule { }

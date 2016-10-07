@@ -5,11 +5,11 @@ import { Item } from './item';
 
 @Component({
   selector: 'grocery-list',
-  templateUrl: 'angular/app/app.component.html',
-  providers: [GroceryListService] // This seems to lock up the page
+  templateUrl: 'angular/grocery-list/grocery-list.component.html',
+  providers: [GroceryListService]
 })
 
-export class GroceryListComponent implements OnInit {
+export class GroceryListComponent /*implements OnInit*/ {
   errorMessage: string;
   items: Item[];
   mode = 'Observable';

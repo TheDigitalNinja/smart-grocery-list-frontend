@@ -1,6 +1,6 @@
 <ul class="mdl-list">
 
-    <li *ngIf="items.length === 0" class="mdl-list__item">No grocery items.</li>
+    <li *ngIf="!items" class="mdl-list__item">No grocery items.</li>
 
     <li *ngFor="let item of items" class="mdl-list__item">
         <input 
@@ -15,12 +15,12 @@
 
 <form action="#" (ngSubmit)="addItem()">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input 
+      <!-- <input 
         [(ngModel)]="item.name"
         name="name"
         class="mdl-textfield__input"
         type="text"
         id="addGroceryInput">
-      <label class="mdl-textfield__label" for="addGroceryInput">Item</label>
+      <label class="mdl-textfield__label" for="addGroceryInput">Item</label> -->
     </div>
 </form>
