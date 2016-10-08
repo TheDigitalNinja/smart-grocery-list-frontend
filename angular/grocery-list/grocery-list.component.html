@@ -4,11 +4,11 @@
 
     <li *ngFor="let item of items" class="mdl-list__item">
         <input
-            (change)="updateItemName(item._links.self.href, newItemName.value)"
-            #newItemName
+            (ngModelChange)="updateItemName(item._links.self.href, $event)"
+            [ngModel]="item.name"
+            [value]="name"
             class="mdl-textfield__input"
             type="text"
-            value="{{ item.name }}"
             autocomplete="off">
         <a (click)=deleteItem(item._links.self.href); class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
     </li>
