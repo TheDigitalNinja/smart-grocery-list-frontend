@@ -46,7 +46,7 @@ export class GroceryListComponent /*implements OnInit*/ {
   }
 
   deleteItem(itemUrl: string) {
-    this.groceryListService.deleteItem(itemUrl).subscribe( items => {
+    this.groceryListService.deleteItem(itemUrl).debounceTime(1500).subscribe( items => {
       this.items.forEach((t,i) => {
         if (this.items[i]._links.self.href == itemUrl) {
           this.items.splice(i, 1);

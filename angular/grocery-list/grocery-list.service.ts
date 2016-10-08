@@ -32,7 +32,6 @@ export class GroceryListService {
     let options = new RequestOptions({ headers: headers });
 
     return this.http.patch(itemUrl, body, options)
-                    .debounceTime(1500)
                     .map(this.extractPostRepData)
                     .catch(this.handleError);
   }
