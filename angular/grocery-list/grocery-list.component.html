@@ -2,7 +2,7 @@
 
     <li *ngIf="!items" class="mdl-list__item">No grocery items.</li>
 
-    <li *ngFor="let item of items" class="mdl-list__item" id="{{ item._links.self.href }}">
+    <li *ngFor="let item of items" class="mdl-list__item">
         <input
             (change)="updateItemName(item._links.self.href, newItemName.value)"
             #newItemName
