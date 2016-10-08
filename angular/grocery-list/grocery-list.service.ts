@@ -26,7 +26,7 @@ export class GroceryListService {
                     .catch(this.handleError);
   }
 
-  deleteItem (itemUrl: string): Observable<Item> {
+  deleteItem (itemUrl: string): Observable<Response> {
     return this.http.delete(itemUrl);
   }
 
