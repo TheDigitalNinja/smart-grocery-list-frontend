@@ -5,10 +5,11 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }   from './app.component';
 import { GroceryListComponent }   from '../grocery-list/grocery-list.component';
+import { ShoppingListComponent }   from '../shopping-list/shopping-list.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, JsonpModule ],
-  declarations: [ AppComponent, GroceryListComponent ],
+  declarations: [ AppComponent, GroceryListComponent, ShoppingListComponent ],
   bootstrap:    [ AppComponent ]
 })
 
