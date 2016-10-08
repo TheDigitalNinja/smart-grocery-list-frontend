@@ -4,6 +4,8 @@
 
     <li *ngFor="let item of items" class="mdl-list__item" id="{{ item._links.self.href }}">
         <input
+            (change)="updateItemName(item._links.self.href, newItemName.value)"
+            #newItemName
             class="mdl-textfield__input"
             type="text"
             value="{{ item.name }}"

@@ -26,6 +26,17 @@ export class GroceryListService {
                     .catch(this.handleError);
   }
 
+  updateItemName (itemUrl: string, name: string): Observable<Item> {
+    let body = JSON.stringify({ name });
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+
+    return this.http.patch(itemUrl, body, options)
+                    .debounceTime(1500)
+                    .map(this.extractPostRepData)
+                    .catch(this.handleError);
+  }
+
   deleteItem (itemUrl: string): Observable<Response> {
     return this.http.delete(itemUrl);
   }

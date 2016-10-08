@@ -33,6 +33,18 @@ export class GroceryListComponent /*implements OnInit*/ {
                              error =>  this.errorMessage = <any>error);
   }
 
+  updateItemName (itemUrl: string, name: string) {
+    console.log("Change Name: %s Url: %s",name,itemUrl);
+    if (!name) { return; }
+    this.groceryListService.updateItemName(itemUrl, name).subscribe( items => {
+      this.items.forEach((t,i) => {
+        if (this.items[i]._links.self.href == itemUrl) {
+          this.items[i].name = name;
+        }
+      })
+    }, error =>  this.errorMessage = <any>error);
+  }
+
   deleteItem(itemUrl: string) {
     this.groceryListService.deleteItem(itemUrl).subscribe( items => {
       this.items.forEach((t,i) => {
